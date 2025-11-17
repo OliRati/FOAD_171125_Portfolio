@@ -29,6 +29,8 @@ for( let i = 1; i<=8 ; i++) {
         console.log('Clicked on folio', i);
 
         const slideshow = document.querySelector('.slideshow');
+        const slideshowcurrentimg = document.getElementById('slideshowcurrentimg');
+        slideshowcurrentimg.src = './assets/img/p' + i.toString() + '.jpg';
         slideshow.style.display = 'block';
     });
 }
