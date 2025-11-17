@@ -20,10 +20,12 @@
             <div class="innermenucontainer">
                 <div>
                     <ul class="menu">
-                        <li>HOME</li>
+                        <li><a href="#home">HOME</a></li>
                         <li class="menufull">
-                            <i class="fa-solid fa-user"></i>
-                            ABOUT
+                            <a href="#about">
+                                <i class="fa-solid fa-user"></i>
+                                ABOUT
+                            </a>
                         </li>
                         <li class="menufull" id="menuPortfolio">
                             <svg data-prefix="fas" data-icon="grid" role="img" viewBox="0 0 448 512" aria-hidden="true"
@@ -47,8 +49,11 @@
                             </div>
                         </li>
                         <li class="menufull">
-                            <i class="fa-solid fa-envelope"></i>
-                            CONTACT
+                            <a href="#contact">
+                                <i class="fa-solid fa-envelope"></i>
+                                CONTACT
+                            </a>
+                        </li>
                         </li>
                     </ul>
                 </div>
@@ -64,7 +69,7 @@
         </div>
     </header>
 
-    <main>
+    <main id="home">
         <div class="slideshow">
             <div class="closeslide"><i class="fa-solid fa-xmark"></i></div>
             <div class="previous"><i class="fa-solid fa-angle-left"></i></div>
@@ -91,7 +96,7 @@
         </div>
 
         <!-- This is start of About Me section -->
-        <div class="aboutcontainer">
+        <div class="aboutcontainer" id="about">
             <h2>ABOUT ME</h2>
             <p class="subtitle">
                 I love photography
@@ -191,7 +196,7 @@
             </div>
         </div>
 
-        <div class="contactcontainer">
+        <div class="contactcontainer" id="contact">
             <p class="title">WHERE I WORK</p>
             <p class="subtitle">I'd love your feedback!</p>
             <div>
