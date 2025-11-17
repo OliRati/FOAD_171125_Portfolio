@@ -667,4 +667,40 @@ footer>a:hover {
             width: 100%;
         }
     }
+
+    .closeslide {
+        position: absolute;
+        font-size: 2rem;
+        color: black;
+        top: 0;
+        left: 105%;
+        text-shadow: 0.3rem 0.3rem 0.3rem rgba(65, 65, 65, .3);
+    }
+
+    .closeslide:hover {
+        cursor: pointer;
+    }
+
+    .previous,
+    .next {
+        position: absolute;
+        top: 50%;
+        font-size: 2rem;
+        transform: translateY(-50%);
+        color: white;
+        text-shadow: 0.3rem 0.3rem 0.3rem rgba(65, 65, 65, .3);
+    }
+
+    .previous:hover,
+    .next:hover {
+        cursor: pointer;
+    }
+
+    .previous {
+        left: 2rem;
+    }
+
+    .next {
+        right: 2rem;
+    }
 }
