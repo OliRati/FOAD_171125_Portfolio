@@ -11,15 +11,23 @@
 
 .container,
 .menucontainer,
-.herocontainer,
 .aboutcontainer,
 .mynamecontainer,
 .goodatcontainer,
-.statscontainer,
+.innerstatscontainer,
+.portfoliocontainer,
 .contactcontainer {
     width: 90vw;
     max-width: 1280px;
     margin: 0 auto;
+}
+
+.herocontainer,
+.portfolioimgcontainer,
+.statscontainer,
+.contactimgcontainer
+{
+    width: 100vw;
 }
 
 /*
@@ -92,7 +100,6 @@ header {
     background-attachment: fixed;
     background-position: center;
 
-    width: 100%;
     min-height: 600px;
     position: relative;
 
@@ -185,6 +192,23 @@ h2,
 
     .rightside {
         display: none;
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .mynamecontainer {
+        flex-direction: row;
+        justify-content: space-between;
+
+        .leftside,
+        .rightside {
+            width: 49%;
+        }
+
+        .rightside {
+            display: block;
+        }
     }
 }
 
@@ -233,6 +257,7 @@ progress::after {
     .skillsbar {
         display: flex;
         flex-direction: column;
+        margin-bottom: 5rem;
 
         label {
             font-size: 1.5rem;
@@ -250,12 +275,16 @@ progress::after {
  */
 
 .statscontainer {
+    background-color: #666;
+    color: white;
+
+}
+
+.innerstatscontainer {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    background-color: #666;
-    color: white;
+    justify-content: space-between;
     padding-top: 3rem;
 
     p {
@@ -272,7 +301,7 @@ progress::after {
 }
 
 @media screen and (min-width: 576px) {
-    .statscontainer {
+    .innerstatscontainer {
         margin-top: 5rem;
         flex-direction: row;
     }
@@ -344,6 +373,21 @@ progress::after {
         background-color: lightgray;
         color: black;
         transition: 0.3s all;
+    }
+}
+
+@media screen and (min-width:576px) {
+    .portfoliocontainer {
+        .portfolioimgs {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            >div {
+                width: 24%;
+                margin-bottom: 1rem;
+            }
+        }
     }
 }
 
@@ -476,6 +520,32 @@ progress::after {
 
         }
 
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .contactcontainer {
+        >div {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .contactimg {
+            width: 30%;
+        }
+
+        .contactPanel {
+            width: 65%;
+
+            .formNameEmail {
+                flex-direction: row;
+                justify-content: space-between;
+
+                input[type="text"] {
+                    width: 49%;
+                }
+            }
+        }
     }
 }
 
