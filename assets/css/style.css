@@ -1,0 +1,252 @@
+@import url('./reset.css');
+
+@font-face {
+    font-family: 'lato';
+    src: url('../font/Lato-Regular.ttf');
+}
+
+* {
+    font-family: 'lato';
+}
+
+.container,
+.menucontainer,
+.herocontainer,
+.aboutcontainer,
+.mynamecontainer,
+.goodatcontainer {
+    width: 90vw;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/*
+ * Menu CSS
+ */
+
+header {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.menucontainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    font-size: 1.2rem;
+
+    .menu {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+
+        svg {
+            width: 1rem;
+            display: inline-block;
+        }
+
+        .menufull {
+            display: none;
+        }
+    }
+
+    .menusearch {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    body {
+        background-color: lightcoral;
+    }
+
+    .menucontainer {
+        .menuhamburger {
+            display: none;
+        }
+
+        .menu {
+            .menufull {
+                display: block;
+            }
+        }
+
+        .menusearch {
+            display: block;
+        }
+    }
+}
+
+/*
+ * Hero CSS
+ */
+
+.herocontainer {
+    background-image: url('../img/parallax1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /* Set Parallax effect */
+    background-attachment: fixed;
+    background-position: center;
+
+    width: 100%;
+    min-height: 600px;
+    position: relative;
+
+    .herologo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 1rem 2rem;
+        background-color: black;
+        color: white;
+        font-size: 2.6rem;
+        letter-spacing: 1rem;
+
+        span {
+            display: none;
+        }
+    }
+}
+
+@media screen and (min-width:576px) {
+    .herocontainer {
+        .herologo {
+            span {
+                display: inline-block;
+            }
+        }
+    }
+}
+
+/*
+ * Define global styles
+ */
+
+h2 {
+    font-size: 2.2rem;
+    margin-top: 7rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.content {
+    font-size: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+/*
+ *  About Me CSS section
+ */
+
+.aboutcontainer {
+    width: 95%;
+}
+
+/*
+ * My name CSS section
+ */
+
+.mynamecontainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .leftside {
+        width: 100%;
+
+        h3 {
+            margin-bottom: 5rem;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        .leftsideimage {
+            width: 90%;
+            margin: 0 auto;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .rightside {
+        display: none;
+    }
+}
+
+/*
+  * Good at section
+  */
+
+progress::-webkit-progress-bar {
+    background: #EEE;
+}
+
+progress::-webkit-progress-value {
+    background: #666;
+}
+
+progress {
+    appearance: none;
+    margin-bottom: 0.4rem;
+    margin-top: 0.8rem;
+    width: 100%;
+    height: 2em;
+    border-radius: 0;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+progress::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    content: attr(value)'%';
+    transform: translate(-50%, -50%);
+}
+
+.goodatcontainer {
+    h3 {
+        margin-top: 5rem;
+        margin-bottom: 3rem;
+
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .skillsbar {
+        display: flex;
+        flex-direction: column;
+
+        label {
+            font-size: 1.5rem;
+            letter-spacing: 1rem;
+
+            i {
+                margin-right: 0.6rem;
+            }
+        }
+    }
+}
+
+/*
+ * Statistics section
+ */
+
