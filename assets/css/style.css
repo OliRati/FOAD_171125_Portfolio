@@ -149,7 +149,7 @@ header {
         padding: 1rem 2rem;
         background-color: black;
         color: white;
-        font-size: 2.6rem;
+        font-size: 1.8rem;
         letter-spacing: 1rem;
         text-wrap: nowrap;
 
@@ -165,6 +165,14 @@ header {
             span {
                 display: inline-block;
             }
+        }
+    }
+}
+
+@media screen and (min-width:1080px) {
+    .herocontainer {
+        .herologo {
+            font-size: 2.6rem;
         }
     }
 }
@@ -299,7 +307,7 @@ progress::after {
         margin-bottom: 5rem;
 
         label {
-            font-size: 1.5rem;
+            font-size: 1.1rem;
             letter-spacing: 1rem;
 
             i {
@@ -308,6 +316,17 @@ progress::after {
         }
     }
 }
+
+@media screen and (min-width:576px) {
+    .goodatcontainer {
+        .skillsbar {
+            label {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
 
 /*
  * Statistics CSS section
@@ -369,7 +388,8 @@ progress::after {
         left: 50%;
         transform: translate(-50%, -50%);
         color: white;
-        font-size: 3.2rem;
+        font-size: 2.1rem;
+        /* 3.2rem; */
         letter-spacing: 1rem;
     }
 }
@@ -425,6 +445,7 @@ progress::after {
             >div {
                 width: 24%;
                 margin-bottom: 1rem;
+                font-size: 3.2rem;
             }
         }
     }
@@ -453,7 +474,7 @@ progress::after {
         left: 50%;
         transform: translate(-50%, -50%);
         color: white;
-        font-size: 3.2rem;
+        font-size: 2.8rem;
         letter-spacing: 1rem;
     }
 }
@@ -481,11 +502,15 @@ progress::after {
             width: 100%;
 
             p {
-                font-size: 1.8rem;
+                font-size: 1.4rem
+                    /*1.8rem*/
+                ;
             }
 
             i {
-                margin-right: 1.8em;
+                margin-right:
+                    /*1.8rem*/
+                    1.4rem;
                 margin-top: 0.5rem;
                 margin-bottom: 0.5rem;
             }
@@ -563,6 +588,12 @@ progress::after {
 }
 
 @media screen and (min-width: 576px) {
+    .contactimgcontainer {
+        >div {
+            font-size: 3.2rem;
+        }
+    }
+
     .contactcontainer {
         >div {
             flex-direction: row;
@@ -575,6 +606,16 @@ progress::after {
 
         .contactPanel {
             width: 65%;
+
+            .contactList {
+                p {
+                    font-size: 1.8rem;
+                }
+
+                i {
+                    margin-right: 1.8rem;
+                }
+            }
 
             .formNameEmail {
                 flex-direction: row;
