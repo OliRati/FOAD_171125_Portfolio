@@ -61,6 +61,21 @@ header {
 
         .menufull {
             display: none;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .menufullshown {
+            position: absolute;
+            top: 100%;
+            right: 2rem;
+            display: block;
+            align-items: center;
+            gap: 2rem;
+            background-color: white;
+            padding: 1rem;
+            border: 1px solid lightgray;
+            box-shadow: 0 0.3rem 0.3rem rgba(65, 65, 65, .3);
         }
 
         li:hover {
@@ -115,7 +130,12 @@ header {
 
         .menu {
             .menufull {
-                display: block;
+                position: unset;
+                border: unset;
+                box-shadow: unset;
+                padding: unset;
+                background-color: unset;
+                display: flex;
             }
         }
 

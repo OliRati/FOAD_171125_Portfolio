@@ -21,6 +21,25 @@ menuPortfolio.addEventListener('click', () => {
     boiteMiniatures.style.display = toggleMiniatures ? 'block' : 'none';
 });
 
+/* Show menu when click on Hamburger Menu icon */
+
+let toggleHamburger = false;
+const menuhamburger = document.querySelector('.menuhamburger');
+menuhamburger.addEventListener('click', () => {
+    toggleHamburger = !toggleHamburger;
+
+    const menuFull = document.querySelector('.menufull');
+    if (toggleHamburger) {
+        menuhamburger.firstElementChild .classList.remove('fa-bars');
+        menuhamburger.firstElementChild.classList.add('fa-xmark');
+        menuFull.classList.add('menufullshown');
+    } else {
+        menuhamburger.firstElementChild.classList.remove('fa-xmark');
+        menuhamburger.firstElementChild.classList.add('fa-bars');
+        menuFull.classList.remove('menufullshown');
+    }
+});
+
 /* Update SlideShow modal contents */
 
 let currentImageIndex = 1;
@@ -31,8 +50,8 @@ function updateSlideImage() {
     const slideshowcurrentimg = document.getElementById('slideshowcurrentimg');
     slideshowcurrentimg.src = './assets/img/p' + currentImageIndex.toString() + '.jpg';
 
-    for( let i = 0; i<8 ; i++) {
-        if (i == (currentImageIndex-1))
+    for (let i = 0; i < 8; i++) {
+        if (i == (currentImageIndex - 1))
             checkmarks[i].classList.add('selectedmak');
         else
             checkmarks[i].classList.remove('selectedmak');
