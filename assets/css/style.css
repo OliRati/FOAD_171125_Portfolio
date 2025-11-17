@@ -47,15 +47,24 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 0;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 
     .menu {
         display: flex;
         align-items: center;
+        justify-content: center;
         gap: 2rem;
 
+        /* Prevent miss vertical alignment between menu items */
+
+        span,
+        svg,
+        i {
+            vertical-align: middle;
+        }
+
         svg {
-            width: 1rem;
+            width: 1.2rem;
             display: inline-block;
         }
 
@@ -70,8 +79,6 @@ header {
             top: 100%;
             right: 2rem;
             display: block;
-            align-items: center;
-            gap: 2rem;
             background-color: white;
             padding: 1rem;
             border: 1px solid lightgray;
@@ -83,8 +90,21 @@ header {
         }
     }
 
+    .menuhamburger {
+        vertical-align: middle;
+    }
+
+    .menuhamburger:hover {
+        cursor: pointer;
+    }
+
     .menusearch {
         display: none;
+        vertical-align: middle;
+    }
+
+    .menusearch:hover {
+        cursor: pointer;
     }
 }
 
@@ -124,6 +144,7 @@ header {
 
 @media screen and (min-width: 576px) {
     .innermenucontainer {
+
         .menuhamburger {
             display: none;
         }
@@ -142,6 +163,12 @@ header {
         .menusearch {
             display: block;
         }
+    }
+}
+
+@media screen and (min-width: 1080px) {
+    .innermenucontainer {
+        font-size: 1.2rem;
     }
 }
 
