@@ -22,18 +22,23 @@ menuPortfolio.addEventListener('click', () => {
 });
 
 /* Add event for each image in miniature box */
+
 let currentImageIndex = 1;
 
-for( let i = 1; i<=8 ; i++) {
-    const folio = document.getElementById('folio'+i.toString());
-    folio.addEventListener('click', ()=>{
-        console.log('Clicked on folio', i);
+function updateSlideImage() {
+    const slideshowcurrentimg = document.getElementById('slideshowcurrentimg');
+    slideshowcurrentimg.src = './assets/img/p' + currentImageIndex.toString() + '.jpg';
+}
 
+for (let i = 1; i <= 8; i++) {
+    const folio = document.getElementById('folio' + i.toString());
+    folio.addEventListener('click', () => {
         const slideshow = document.querySelector('.slideshow');
         const slideshowcurrentimg = document.getElementById('slideshowcurrentimg');
 
         currentImageIndex = i;
-        slideshowcurrentimg.src = './assets/img/p' + i.toString() + '.jpg';
+        updateSlideImage();
+
         slideshow.style.display = 'block';
     });
 }
@@ -42,7 +47,25 @@ for( let i = 1; i<=8 ; i++) {
 /* Take care of miniature box */
 
 const closeSlide = document.querySelector('.closeslide');
-closeSlide.addEventListener('click', ()=>{
-        const slideshow = document.querySelector('.slideshow');
-        slideshow.style.display = 'none';
-})
+closeSlide.addEventListener('click', () => {
+    const slideshow = document.querySelector('.slideshow');
+    slideshow.style.display = 'none';
+});
+
+const previous = document.querySelector('.previous');
+previous.addEventListener('click', () => {
+    currentImageIndex--;
+    if (currentImageIndex < 1)
+        currentImageIndex = 8;
+
+    updateSlideImage();
+});
+
+const next = document.querySelector('.next');
+next.addEventListener('click', () => {
+    currentImageIndex++;
+    if (currentImageIndex > 8)
+        currentImageIndex = 1;
+
+    updateSlideImage();
+});
