@@ -642,3 +642,30 @@ footer>a:hover {
         transition: 0.3s all;
     }
 }
+
+/*
+ * Slide Show modal CSS
+ */
+
+.slideshow {
+    display: none;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 60vw;
+    height: 60vh;
+    background-color: white;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    box-shadow: 0.3rem 0.3rem 0.3rem rgba(65, 65, 65, .3);
+
+    .slideshowimg {
+        margin: 0 auto;
+        width: 80%;
+
+        img {
+            width: 100%;
+        }
+    }
+}
