@@ -10,7 +10,7 @@
 }
 
 .container,
-.menucontainer,
+.innermenucontainer,
 .aboutcontainer,
 .mynamecontainer,
 .goodatcontainer,
@@ -22,11 +22,11 @@
     margin: 0 auto;
 }
 
+.menucontainer,
 .herocontainer,
 .portfolioimgcontainer,
 .statscontainer,
-.contactimgcontainer
-{
+.contactimgcontainer {
     width: 100vw;
 }
 
@@ -42,7 +42,7 @@ header {
     transform: translateX(-50%);
 }
 
-.menucontainer {
+.innermenucontainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -62,6 +62,10 @@ header {
         .menufull {
             display: none;
         }
+
+        li:hover {
+            cursor: pointer;
+        }
     }
 
     .menusearch {
@@ -69,8 +73,42 @@ header {
     }
 }
 
+.opaquemenu {
+    background-color: white;
+    border-bottom: 1px solid lightgray;
+    box-shadow: 0 0.3rem 0.3rem rgba(65, 65, 65, .3);
+    transition: all 0.3s;
+}
+
+#boiteMiniatures {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0.3rem 0.3rem 0.3rem rgba(65, 65, 65, .3);
+    top: 100%;
+
+    >div {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        padding: 0.5rem;
+        width: 27rem;
+
+        img {
+            width: 6rem;
+            height: 4rem;
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+        img:hover {
+            filter: brightness(70%);
+        }
+    }
+}
+
 @media screen and (min-width: 576px) {
-    .menucontainer {
+    .innermenucontainer {
         .menuhamburger {
             display: none;
         }
@@ -113,6 +151,7 @@ header {
         color: white;
         font-size: 2.6rem;
         letter-spacing: 1rem;
+        text-wrap: nowrap;
 
         span {
             display: none;
