@@ -741,7 +741,8 @@ footer>a:hover {
     position: fixed;
     top: 50%;
     left: 50%;
-    width: 60vw;
+    width: 90vw;
+    max-width: 800px;
     background-color: white;
     transform: translate(-50%, -50%);
     z-index: 2;
@@ -759,14 +760,16 @@ footer>a:hover {
     .closeslide {
         position: absolute;
         font-size: 2rem;
-        color: black;
+        color: #808080;
         top: 0;
-        left: 105%;
+        left: calc(100% - 3rem);
         text-shadow: 0.3rem 0.3rem 0.3rem rgba(65, 65, 65, .3);
     }
 
     .closeslide:hover {
         cursor: pointer;
+        color: black;
+        transition: all 0.3s;
     }
 
     .previous,
@@ -775,27 +778,29 @@ footer>a:hover {
         top: 50%;
         font-size: 2rem;
         transform: translateY(-50%);
-        color: white;
+        color: rgba(255, 255, 255, 0.7);
         text-shadow: 0.3rem 0.3rem 0.3rem rgba(65, 65, 65, .3);
+    }
+
+    .previous {
+        left: 0.5rem;
+    }
+
+    .next {
+        right: 0.5rem;
     }
 
     .previous:hover,
     .next:hover {
         cursor: pointer;
-    }
-
-    .previous {
-        left: 2rem;
-    }
-
-    .next {
-        right: 2rem;
+        color: rgba(255, 255, 255, 1);
+        transition: all 0.3s;
     }
 
     .slideshowname {
         position: absolute;
         left: 50%;
-        bottom: 5rem;
+        bottom: 4rem;
         width: 80%;
         transform: translateX(-50%);
         font-size: 1.3rem;
@@ -811,15 +816,51 @@ footer>a:hover {
         transform: translateX(-50%);
 
         .positionmark {
-            width: 3rem;
-            height: 0.3rem;
+            width: 1.3rem;
+            height: 0.2rem;
             background-color: rgba(255, 255, 255, .5);
             border-radius: 0.3rem;
             margin: 0 0.3rem;
+            box-shadow: 0.1rem 0.1rem 0.3rem rgba(65, 65, 65, .3);
         }
 
         .selectedmak {
             background-color: rgba(255, 255, 255, 1);
+        }
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .slideshow {
+        width: 70vw;
+
+        .closeslide {
+            left: calc(100% + 1rem);
+        }
+
+        .previous {
+            left: 2rem;
+        }
+
+        .next {
+            width: 2.5rem;
+            right: 2rem;
+        }
+
+        .positionmarkcontainer {
+            .positionmark {
+                width: 2rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1080px) {
+    .slideshow {
+        .positionmarkcontainer {
+            .positionmark {
+                width: 2.5rem;
+            }
         }
     }
 }
