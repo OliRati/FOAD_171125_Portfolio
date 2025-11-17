@@ -21,7 +21,7 @@ menuPortfolio.addEventListener('click', () => {
     boiteMiniatures.style.display = toggleMiniatures ? 'block' : 'none';
 });
 
-/* Add event for each image in miniature box */
+/* Update SlideShow modal contents */
 
 let currentImageIndex = 1;
 
@@ -37,7 +37,13 @@ function updateSlideImage() {
         else
             checkmarks[i].classList.remove('selectedmak');
     }
+
+    const slideshowname = document.querySelector('.slideshowname');
+    slideshowname.innerText = 'IMAGE ' + currentImageIndex.toString();
+
 }
+
+/* Add an EventListener for each image in miniature box */
 
 for (let i = 1; i <= 8; i++) {
     const folio = document.getElementById('folio' + i.toString());
@@ -53,7 +59,7 @@ for (let i = 1; i <= 8; i++) {
 }
 
 
-/* Take care of miniature box */
+/* Take care of SlideShow events */
 
 const closeSlide = document.querySelector('.closeslide');
 closeSlide.addEventListener('click', () => {
