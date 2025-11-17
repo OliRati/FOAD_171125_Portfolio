@@ -26,8 +26,17 @@ menuPortfolio.addEventListener('click', () => {
 let currentImageIndex = 1;
 
 function updateSlideImage() {
+    const checkmarks = document.querySelectorAll('.positionmark');
+
     const slideshowcurrentimg = document.getElementById('slideshowcurrentimg');
     slideshowcurrentimg.src = './assets/img/p' + currentImageIndex.toString() + '.jpg';
+
+    for( let i = 0; i<8 ; i++) {
+        if (i == (currentImageIndex-1))
+            checkmarks[i].classList.add('selectedmak');
+        else
+            checkmarks[i].classList.remove('selectedmak');
+    }
 }
 
 for (let i = 1; i <= 8; i++) {
