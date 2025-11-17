@@ -30,7 +30,7 @@ menuhamburger.addEventListener('click', () => {
 
     const menuFull = document.querySelector('.menufull');
     if (toggleHamburger) {
-        menuhamburger.firstElementChild .classList.remove('fa-bars');
+        menuhamburger.firstElementChild.classList.remove('fa-bars');
         menuhamburger.firstElementChild.classList.add('fa-xmark');
         menuFull.classList.add('menufullshown');
     } else {
