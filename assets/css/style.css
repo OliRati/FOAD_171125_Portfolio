@@ -121,6 +121,7 @@ header {
     background-color: white;
     box-shadow: 0.3rem 0.3rem 0.3rem rgba(65, 65, 65, .3);
     top: 100%;
+    right: 0;
 
     >div {
         display: flex;
@@ -163,6 +164,10 @@ header {
         .menusearch {
             display: block;
         }
+    }
+
+    #boiteMiniatures {
+        right: unset;
     }
 }
 
