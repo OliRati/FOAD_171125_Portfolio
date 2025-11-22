@@ -128,7 +128,7 @@ header {
         flex-wrap: wrap;
         gap: 0.5rem;
         padding: 0.5rem;
-        width: 27rem;
+        width: 13.5rem;
 
         img {
             width: 6rem;
@@ -168,6 +168,10 @@ header {
 
     #boiteMiniatures {
         right: unset;
+
+        >div {
+            width: 26.5rem;
+        }
     }
 }
 
